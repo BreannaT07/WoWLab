@@ -22,7 +22,7 @@ class Character:
     #Creating Specialized Classes
 #Polymorphism 
   #Demostrating Polymorphism
-class Warrior(Character): 
+class Pladin(Character): 
     def __init__(self, name, race, weapon):
         super().__init__(name, race)
         self.weapon = weapon
@@ -30,7 +30,7 @@ class Warrior(Character):
     def special_ability(self):
       print(f"{self.name} swings their {self.weapon} mightily!")
       
-class Mage(Character):
+class Divine(Character):
     def __init__(self, name, race, magic_type):
         super().__init__(name, race)
         self.magic_type = magic_type
@@ -40,13 +40,13 @@ class Mage(Character):
 
 #Creating the Characters
     #Creating the characters instances and interaction with them
-arthas = Warrior("Arthas Menethil", "Orc", "Axe")
-jaina = Mage("Jaina", "Human", "Frost")
+arthas = Pladin("Arthas Menethil", "Pladin", "Sword")
+velen = Divine("Velen", "Draenei", "Frost")
 
 arthas.show_info()
 arthas.special_ability()
 
-jaina.show_info()
-jaina.special_ability()
-jaina.level_up()
-jaina.show_info()
+velen.show_info()
+velen.special_ability()
+velen.level_up()
+velen.show_info()
